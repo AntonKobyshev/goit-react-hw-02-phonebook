@@ -4,13 +4,14 @@ import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { Title, Subtitle, Container } from './App.styled';
 import initialContacts from '../data/contacts';
+import { AiFillContacts, AiFillBook } from 'react-icons/ai';
 
 export class App extends React.Component {
   state = {
     contacts: initialContacts,
     filter: '',
     name: '',
-    number: ''
+    number: '',
   };
 
   addContact = data => {
@@ -41,12 +42,21 @@ export class App extends React.Component {
 
     return (
       <Container>
-        <Title>Phonebook</Title>
+        <Title>
+          <AiFillBook size="36" />
+          Phonebook
+        </Title>
         <ContactForm onSubmit={this.addContact} />
 
-        <Subtitle>Contacts</Subtitle>
+        <Subtitle>
+          <AiFillContacts size="36" />
+          Contacts
+        </Subtitle>
         <Filter value={filter} onFilterChange={this.onFilterChange} />
-        <ContactList deleteContact={this.deleteContact} contacts={filteredContacts} />
+        <ContactList
+          deleteContact={this.deleteContact}
+          contacts={filteredContacts}
+        />
       </Container>
     );
   }

@@ -20,9 +20,15 @@ export const Wrapper = styled.div`
 
 export const Label = styled.label`
   margin-bottom: 10px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 24px;
   color: var(--secondary);
+
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: baseline;
 `;
 
 export const Input = styled(Field)`
@@ -36,6 +42,7 @@ export const Input = styled(Field)`
   border: none;
   border-radius: 8px;
   box-shadow: var(--inset-shadow);
+  outline: none;
 `;
 
 export const ErrorMsg = styled(ErrorMessage)`
@@ -44,6 +51,12 @@ export const ErrorMsg = styled(ErrorMessage)`
 `;
 
 export const Btn = styled.button`
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
   padding: 10px 25px;
 
   font-size: 24px;

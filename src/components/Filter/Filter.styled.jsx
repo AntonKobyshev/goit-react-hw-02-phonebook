@@ -12,9 +12,14 @@ export const Wrapper = styled.div`
 `;
 
 export const Label = styled.label`
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
   margin-bottom: 10px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 24px;
+
   color: var(--secondary);
 `;
 
@@ -29,4 +34,5 @@ export const Input = styled.input`
   border: none;
   border-radius: 5px;
   box-shadow: var(--inset-shadow);
+  outline: none;
 `;

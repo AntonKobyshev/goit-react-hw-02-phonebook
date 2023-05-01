@@ -32,23 +32,29 @@ export const Name = styled.span`
 export const Number = styled.span`
   text-align: right;
 
-  font-weight: 500;
+  font-weight: 400;
   font-size: 22px;
   color: var(--accent);
   flex-basis: 33.333%;
 `;
 
 export const Btn = styled.button`
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
   /* max-width: 100px; */
   padding: 5px 15px;
   flex-basis: 15%;
 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--accent);
 
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px solid var(--accent);
   box-shadow: var(--main-shadow);
 

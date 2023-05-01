@@ -4,6 +4,8 @@ import { nanoid } from 'nanoid';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ContainerForm, Input, Label, Wrapper, ErrorMsg, Btn } from './ContactForm.styled';
+import { IoMdPersonAdd } from 'react-icons/io';
+import { BsFillTelephoneFill, BsPersonFill } from 'react-icons/bs';
 
 
 
@@ -47,7 +49,9 @@ export const ContactForm = ({ onSubmit }) => {
       <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={schema}>
         <ContainerForm autoComplete="off">
           <Wrapper >
-            <Label htmlFor="name">Name:</Label>
+            <Label htmlFor="name">
+              <BsPersonFill size="20"/>
+              Name:</Label>
             <Input name="name" type="text" id="name" pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required />
@@ -55,14 +59,18 @@ export const ContactForm = ({ onSubmit }) => {
           </Wrapper>
 
           <Wrapper>
-            <Label htmlFor="number">Number:</Label>
+            <Label htmlFor="number">
+              <BsFillTelephoneFill size="20"/>
+              Number:</Label>
             <Input name="number" type="tel" id="number" pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required />
             <ErrorMsg name="number" component="div" />
           </Wrapper>
 
-          <Btn type="submit">Add contact</Btn>
+          <Btn type="submit">
+            <IoMdPersonAdd size="24" />
+            Add contact</Btn>
         </ContainerForm>
       </Formik>
     </>

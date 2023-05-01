@@ -1,5 +1,12 @@
 import PropTypes from 'prop-types';
-import { Btn, Contacts, ContactsItem, Name, Number } from './ContactList.styled';
+import {
+  Btn,
+  Contacts,
+  ContactsItem,
+  Name,
+  Number,
+} from './ContactList.styled';
+import { IoPersonRemove } from 'react-icons/io5';
 
 export const ContactList = ({ contacts, deleteContact }) => {
   return (
@@ -11,6 +18,7 @@ export const ContactList = ({ contacts, deleteContact }) => {
               <Name>{name}</Name>
               <Number>{number}</Number>
               <Btn type="button" onClick={() => deleteContact(id)}>
+                <IoPersonRemove size="16" />
                 Delete
               </Btn>
             </ContactsItem>
