@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Contacts = styled.ul`
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,14 +18,13 @@ export const ContactsItem = styled.li`
   gap: 30px;
 
   box-shadow: var(--main-shadow);
-  border-radius: 5px;
+  border-radius: 8px;
 `;
 
 export const Name = styled.span`
   text-align: left;
   font-size: 22px;
   color: var(--primary);
-  text-shadow: var(--main-shadow);
 
   flex-basis: 33.333%;
 `;
@@ -36,7 +35,6 @@ export const Number = styled.span`
   font-weight: 500;
   font-size: 22px;
   color: var(--accent);
-  text-shadow: var(--main-shadow);
   flex-basis: 33.333%;
 `;
 

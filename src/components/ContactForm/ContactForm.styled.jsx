@@ -1,7 +1,7 @@
 import { Form, Field, ErrorMessage } from 'formik';
 import styled from '@emotion/styled';
 
-export const Container = styled(Form)`
+export const ContainerForm = styled(Form)`
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 20px;
@@ -23,7 +23,6 @@ export const Label = styled.label`
   font-weight: 500;
   font-size: 24px;
   color: var(--secondary);
-  text-shadow: var(--main-shadow);
 `;
 
 export const Input = styled(Field)`
@@ -35,12 +34,12 @@ export const Input = styled(Field)`
 
   background-color: transparent;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: var(--inset-shadow);
 `;
 
 export const ErrorMsg = styled(ErrorMessage)`
-  margin-top: 7px;
+  margin-top: 8px;
   color: red;
 `;
 
@@ -52,7 +51,7 @@ export const Btn = styled.button`
   color: var(--accent);
 
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px solid var(--accent);
   box-shadow: var(--main-shadow);
 
