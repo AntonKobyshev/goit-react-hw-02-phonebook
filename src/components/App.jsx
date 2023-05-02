@@ -17,12 +17,26 @@ export class App extends React.Component {
   addContact = data => {
     this.setState(({ contacts }) =>
       contacts.find(contact => contact.name.toLowerCase().trim() ===
-          data.name.toLowerCase().trim() ||
-        contact.number.trim() === data.number.trim())
-        ? alert(`${data.name} is already in contacts`)
+          data.name.toLowerCase().trim() )
+        ? alert(`The name ${data.name} is already in contacts`)
         : { contacts: [data, ...contacts] }
+        ||
+        contacts.find(contact => contact.number.trim() === data.number.trim() )
+        ? alert(`The number ${data.number} is already in contacts`)
+        : { contacts: [data, ...contacts] }
+        
     );
   };
+  
+  //  addContact = data => {
+  //   this.setState(({ contacts }) =>
+  //     contacts.find(contact => contact.name.toLowerCase().trim() ===
+  //         data.name.toLowerCase().trim() ||
+  //       contact.number.trim() === data.number.trim())
+  //       ? alert(`${data.name} is already in contacts`)
+  //       : { contacts: [data, ...contacts] }
+  //   );
+  // };
 
   onFilterChange = e => {
     const { value } = e.currentTarget;
