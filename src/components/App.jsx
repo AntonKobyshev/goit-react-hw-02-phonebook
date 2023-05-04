@@ -19,9 +19,7 @@ export class App extends React.Component {
       contacts.find(contact => contact.name.toLowerCase().trim() ===
           data.name.toLowerCase().trim() )
         ? alert(`The name ${data.name} is already in contacts`)
-        : { contacts: [data, ...contacts] }
-        ||
-        contacts.find(contact => contact.number.trim() === data.number.trim() )
+        : contacts.find(contact => contact.number.trim() === data.number.trim() )
         ? alert(`The number ${data.number} is already in contacts`)
         : { contacts: [data, ...contacts] }
         
